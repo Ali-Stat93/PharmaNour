@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <!-- ************************************************************************ -->
+  <!-- Global Project Info -->
+  <!-- ************************************************************************ -->
+
+  <!-- ************************************ -->
+  <!-- Parent Info -->
+  <!-- ************************************ -->
+  <parent>
+    <artifactId>pharmaNour</artifactId>
+    <groupId>tp.demo.exemple</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
+  <!-- ************************************ -->
+  <!-- Maven Info -->
+  <!-- ************************************ -->
+  <groupId>tp.demo.exemple</groupId>
+  <artifactId>pharmaNour-batch</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <!-- ************************************ -->
+  <!-- General Information -->
+  <!-- ************************************ -->
+  <name>pharmaNour-batch</name>
+  <!-- FIXME change it to the project's website -->
+  <url>http://www.example.com</url>
+
+  <!-- ************************************ -->
+  <!-- Properties -->
+  <!-- ************************************ -->
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <!-- ************************************ -->
+  <!-- Dependencies -->
+  <!-- ************************************ -->
+  <dependencies>
+    <dependency>
+      <groupId>tp.demo.exemple</groupId>
+      <artifactId>pharmaNour-business</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>tp.demo.exemple</groupId>
+      <artifactId>pharmaNour-model</artifactId>
+    </dependency>
+    <!-- Other dependencies -->
+    <dependency><!-- Junit -->
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+    </dependency>
+  </dependencies>
+
+  <!-- ************************************ -->
+  <!-- Build -->
+  <!-- ************************************ -->
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-jar-plugin</artifactId>
+        <configuration>
+          <archive>
+            <manifest>
+              <mainClass>tp.demo.exemple.batch.App</mainClass>
+            </manifest>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
+    <resources>
+      <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+        <excludes>
+          <exclude>*.txt</exclude>
+        </excludes>
+      </resource>
+    </resources>
+  </build>
+</project>
