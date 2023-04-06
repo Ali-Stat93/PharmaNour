@@ -1,6 +1,6 @@
 package tp.demo.exemple.model.beans.pharma;
 
-public class Vente {
+public class Sale {
     private String Id_V;
     private String Nom_C;
     private int Qte;
@@ -15,7 +15,7 @@ public class Vente {
      * @param ppa
      * @param total
      */
-    public Vente(String id_V, String nom_C, int qte, float ppa, float total) {
+    public Sale(String id_V, String nom_C, int qte, float ppa, float total) {
         Id_V = id_V;
         Nom_C = nom_C;
         Qte = qte;
@@ -27,7 +27,7 @@ public class Vente {
      *
      * @param id_V
      */
-    public Vente(String id_V) {
+    public Sale(String id_V) {
         Id_V = id_V;
     }
     /********** Getters & Setters ***********/

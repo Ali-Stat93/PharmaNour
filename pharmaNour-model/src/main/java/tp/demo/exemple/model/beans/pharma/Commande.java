@@ -2,7 +2,7 @@ package tp.demo.exemple.model.beans.pharma;
 
 import java.time.LocalDate;
 
-public class BonCommande {
+public class Commande {
     private String Id_bon;
     private LocalDate Date_bon;
     /********** Constructor ***********/
@@ -11,7 +11,7 @@ public class BonCommande {
      * @param id_bon
      * @param date_bon
      */
-    public BonCommande(String id_bon, LocalDate date_bon) {
+    public Commande(String id_bon, LocalDate date_bon) {
         Id_bon = id_bon;
         Date_bon = date_bon;
     }
@@ -20,7 +20,7 @@ public class BonCommande {
      *
      * @param id_bon
      */
-    public BonCommande(String id_bon) {
+    public Commande(String id_bon) {
         Id_bon = id_bon;
     }
     /********** Getters & Setters ***********/

@@ -3,12 +3,12 @@ package tp.demo.exemple.model.beans.pharma;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Echange {
+public class Exchange {
     private String Id_Echange;
     private String Id_ph;
     private String Nom_ph;
     private String type;
-    private List<Produit> produits;
+    private List<Product> products;
 
 
     /********** Constructor ***********/
@@ -16,9 +16,9 @@ public class Echange {
      *
      * @param id_Echange
      */
-    public Echange(String id_Echange) {
+    public Exchange(String id_Echange) {
         Id_Echange = id_Echange;
-        produits = new ArrayList<>();
+        products = new ArrayList<>();
     }
 
     /**
@@ -28,7 +28,7 @@ public class Echange {
      * @param nom_ph
      * @param type
      */
-    public Echange(String id_Echange, String id_ph, String nom_ph, String type) {
+    public Exchange(String id_Echange, String id_ph, String nom_ph, String type) {
         this(id_Echange);
         Id_ph = id_ph;
         Nom_ph = nom_ph;

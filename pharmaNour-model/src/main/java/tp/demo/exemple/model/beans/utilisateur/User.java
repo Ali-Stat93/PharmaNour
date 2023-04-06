@@ -1,10 +1,10 @@
 package tp.demo.exemple.model.beans.utilisateur;
 
-public class Utilisateur {
+public class User {
     private String id;
     private String nom;
     private String prenom;
-    private TypeUtilisateur typeUtilisateur;
+    private TypeUser typeUser;
 
     /********** Constructor ***********/
     /**
@@ -12,24 +12,24 @@ public class Utilisateur {
      * @param id
      * @param nom
      * @param prenom
-     * @param typeUtilisateur
+     * @param typeUser
      */
-    public Utilisateur(String id, String nom, String prenom, TypeUtilisateur typeUtilisateur) {
+    public User(String id, String nom, String prenom, TypeUser typeUser) {
         this.id = id;
         this.nom = nom;
         this.prenom = prenom;
-        this.typeUtilisateur = typeUtilisateur;
+        this.typeUser = typeUser;
     }
 
     /**
      *
      * @param id
-     * @param typeUtilisateur
+     * @param typeUser
      */
 
-    public Utilisateur(String id, TypeUtilisateur typeUtilisateur) {
+    public User(String id, TypeUser typeUser) {
         this.id = id;
-        this.typeUtilisateur = typeUtilisateur;
+        this.typeUser = typeUser;
     }
 
     /********** Getters & Setters ***********/
@@ -53,11 +53,11 @@ public class Utilisateur {
         this.prenom = prenom;
     }
 
-    public TypeUtilisateur getTypeUtilisateur() {
-        return typeUtilisateur;
+    public TypeUser getTypeUtilisateur() {
+        return typeUser;
     }
 
-    public void setTypeUtilisateur(TypeUtilisateur typeUtilisateur) {
-        this.typeUtilisateur = typeUtilisateur;
+    public void setTypeUtilisateur(TypeUser typeUser) {
+        this.typeUser = typeUser;
     }
 }

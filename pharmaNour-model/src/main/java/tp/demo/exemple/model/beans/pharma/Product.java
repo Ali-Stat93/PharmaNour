@@ -2,7 +2,7 @@ package tp.demo.exemple.model.beans.pharma;
 
 import java.time.LocalDate;
 
-public class Produit {
+public class Product {
     private String N_Lot;
     private String Nom_C;
     private int Qte;
@@ -22,7 +22,7 @@ public class Produit {
      * @param dosage
      * @param conditionnement
      */
-    public Produit(String n_Lot, String nom_C, int qte, float ppa, LocalDate exp, String dosage, String conditionnement) {
+    public Product(String n_Lot, String nom_C, int qte, float ppa, LocalDate exp, String dosage, String conditionnement) {
         N_Lot = n_Lot;
         Nom_C = nom_C;
         Qte = qte;
@@ -36,7 +36,7 @@ public class Produit {
      *
      * @param n_Lot
      */
-    public Produit(String n_Lot) {
+    public Product(String n_Lot) {
         N_Lot = n_Lot;
     }
     /********** Getters & Setters ***********/

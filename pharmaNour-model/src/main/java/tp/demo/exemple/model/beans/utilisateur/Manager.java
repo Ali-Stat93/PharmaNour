@@ -1,6 +1,7 @@
 package tp.demo.exemple.model.beans.utilisateur;
 
-public class Employe extends User {
+public class Manager extends User {
+
     /********** Constructor ***********/
     /**
      *
@@ -8,15 +9,15 @@ public class Employe extends User {
      * @param nom
      * @param prenom
      */
-    public Employe(String id, String nom, String prenom) {
-        super(id, nom, prenom, TypeUser.EMPLOYE);
+    public Manager(String id, String nom, String prenom) {
+        super(id, nom, prenom, TypeUser.GERANT);
     }
 
     /**
      *
      * @param id
      */
-    public Employe(String id) {
-        super(id, TypeUser.EMPLOYE);
+    public Manager(String id) {
+        super(id, TypeUser.GERANT);
     }
 }
