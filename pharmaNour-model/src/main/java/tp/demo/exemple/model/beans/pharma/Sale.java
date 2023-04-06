@@ -1,70 +1,85 @@
 package tp.demo.exemple.model.beans.pharma;
 
+import tp.demo.exemple.model.beans.utilisateur.User;
+
+import java.time.LocalDate;
+
 public class Sale {
-    private String Id_V;
-    private String Nom_C;
-    private int Qte;
-    private float Ppa;
-    private float Total;
+    private String ID_Sale;
+    private LocalDate DateSale;
+    private User user;
+    private boolean isOnLine;
     /********** Constructor ***********/
     /**
      *
-     * @param id_V
-     * @param nom_C
-     * @param qte
-     * @param ppa
-     * @param total
+     * @param ID_Sale
      */
-    public Sale(String id_V, String nom_C, int qte, float ppa, float total) {
-        Id_V = id_V;
-        Nom_C = nom_C;
-        Qte = qte;
-        Ppa = ppa;
-        Total = total;
+    public Sale(String ID_Sale) {
+        this.ID_Sale = ID_Sale;
+        isOnLine=false;
+    }
+    /**
+     *
+     * @param ID_Sale
+     * @param dateSale
+     */
+    public Sale(String ID_Sale, LocalDate dateSale) {
+        this(ID_Sale);
+        DateSale = dateSale;
+
     }
 
     /**
      *
-     * @param id_V
+     * @param ID_Sale
+     * @param dateSale
+     * @param user
      */
-    public Sale(String id_V) {
-        Id_V = id_V;
+    public Sale(String ID_Sale, LocalDate dateSale, User user) {
+        this(ID_Sale,dateSale);
+        this.user=user;
     }
+
+    /**
+     *
+     * @param ID_Sale
+     * @param dateSale
+     * @param user
+     * @param isOnLine
+     */
+    public Sale(String ID_Sale, LocalDate dateSale, User user, boolean isOnLine) {
+        this.ID_Sale = ID_Sale;
+        DateSale = dateSale;
+        this.user = user;
+        this.isOnLine = isOnLine;
+    }
+
     /********** Getters & Setters ***********/
     public String getId_V() {
-        return Id_V;
+        return ID_Sale;
     }
 
-
-    public String getNom_C() {
-        return Nom_C;
+    public LocalDate getDateSale() {
+        return DateSale;
     }
 
-    public void setNom_C(String nom_C) {
-        Nom_C = nom_C;
+    public void setDateSale(LocalDate dateSale) {
+        DateSale = dateSale;
     }
 
-    public int getQte() {
-        return Qte;
+    public String getID_Sale() {
+        return ID_Sale;
     }
 
-    public void setQte(int qte) {
-        Qte = qte;
+    public void setID_Sale(String ID_Sale) {
+        this.ID_Sale = ID_Sale;
     }
 
-    public float getPpa() {
-        return Ppa;
+    public User getUser() {
+        return user;
     }
 
-    public void setPpa(float ppa) {
-        Ppa = ppa;
-    }
-
-    public float getTotal() {
-        return Total;
-    }
-
-    public void setTotal(float total) {
-        Total = total;
+    public void setUser(User user) {
+        this.user = user;
     }
 }

@@ -1,31 +1,35 @@
 package tp.demo.exemple.model.beans.pharma;
 
+import tp.demo.exemple.model.beans.utilisateur.Manager;
+
 import java.time.LocalDate;
 
 public class Commande {
-    private String Id_bon;
+    private String ID_Commande;
     private LocalDate Date_bon;
+    private Manager manager;
     /********** Constructor ***********/
     /**
-     *
-     * @param id_bon
+     *  @param IDCommande
      * @param date_bon
+     * @param manager
      */
-    public Commande(String id_bon, LocalDate date_bon) {
-        Id_bon = id_bon;
+    public Commande(String IDCommande, LocalDate date_bon, Manager manager) {
+        ID_Commande = IDCommande;
         Date_bon = date_bon;
+        this.manager = manager;
     }
 
     /**
      *
-     * @param id_bon
+     * @param IDCommande
      */
-    public Commande(String id_bon) {
-        Id_bon = id_bon;
+    public Commande(String IDCommande) {
+        ID_Commande = IDCommande;
     }
     /********** Getters & Setters ***********/
-    public String getId_bon() {
-        return Id_bon;
+    public String getID_Commande() {
+        return ID_Commande;
     }
 
     public LocalDate getDate_bon() {
@@ -34,5 +38,13 @@ public class Commande {
 
     public void setDate_bon(LocalDate date_bon) {
         Date_bon = date_bon;
+    }
+
+    public Manager getManager() {
+        return manager;
+    }
+
+    public void setManager(Manager manager) {
+        this.manager = manager;
     }
 }

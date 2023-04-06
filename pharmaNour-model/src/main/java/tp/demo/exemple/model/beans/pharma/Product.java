@@ -4,30 +4,29 @@ import java.time.LocalDate;
 
 public class Product {
     private String N_Lot;
-    private String Nom_C;
-    private int Qte;
-    private float Ppa;
-    private LocalDate Exp;
+    private String commercialName;
+    private float Uprice;
+    private float Pprice;
+    private LocalDate DateExp;
     private String Dosage;
     private String conditionnement;
 
     /********** Constructor ***********/
     /**
-     *
-     * @param n_Lot
-     * @param nom_C
-     * @param qte
-     * @param ppa
-     * @param exp
+     *  @param n_Lot
+     * @param commercialName
+     * @param uprice
+     * @param pprice
+     * @param dateExp
      * @param dosage
      * @param conditionnement
      */
-    public Product(String n_Lot, String nom_C, int qte, float ppa, LocalDate exp, String dosage, String conditionnement) {
+    public Product(String n_Lot, String commercialName, float uprice, float pprice, LocalDate dateExp, String dosage, String conditionnement) {
         N_Lot = n_Lot;
-        Nom_C = nom_C;
-        Qte = qte;
-        Ppa = ppa;
-        Exp = exp;
+        this.commercialName = commercialName;
+        Pprice = pprice;
+        Uprice = uprice;
+        DateExp = dateExp;
         Dosage = dosage;
         this.conditionnement = conditionnement;
     }
@@ -44,36 +43,36 @@ public class Product {
         return N_Lot;
     }
 
-    public String getNom_C() {
-        return Nom_C;
+    public String getCommercialName() {
+        return commercialName;
     }
 
-    public void setNom_C(String nom_C) {
-        Nom_C = nom_C;
+    public void setCommercialName(String commercialName) {
+        this.commercialName = commercialName;
     }
 
-    public int getQte() {
-        return Qte;
+    public float getPprice() {
+        return Pprice;
     }
 
-    public void setQte(int qte) {
-        Qte = qte;
+    public void setPprice(float pprice) {
+        Pprice = pprice;
     }
 
-    public float getPpa() {
-        return Ppa;
+    public float getUprice() {
+        return Uprice;
     }
 
-    public void setPpa(float ppa) {
-        Ppa = ppa;
+    public void setUprice(float uprice) {
+        Uprice = uprice;
     }
 
-    public LocalDate getExp() {
-        return Exp;
+    public LocalDate getDateExp() {
+        return DateExp;
     }
 
-    public void setExp(LocalDate exp) {
-        Exp = exp;
+    public void setDateExp(LocalDate dateExp) {
+        DateExp = dateExp;
     }
 
     public String getDosage() {
